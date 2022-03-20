@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "clang++ - Build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/Users/bowhead/prj_mediapipe/bazel-bin/mediapipe/examples/desktop/hair_segmentation/hair_segmentation_cpu",
+            "args": ["--calculator_graph_config_file=/Users/bowhead/prj_mediapipe/mediapipe/graphs/hair_segmentation/hair_segmentation_desktop_live.pbtxt"],
+            "stopAtEntry": true,
+            "cwd": "/Users/bowhead/prj_mediapipe",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            //"preLaunchTask": "C/C++: clang++ build active file ver(1)"
+        }
+    ]
+}

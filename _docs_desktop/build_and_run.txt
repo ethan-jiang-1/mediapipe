@@ -20,3 +20,6 @@ bazel build -c opt --define MEDIAPIPE_DISABLE_GPU=1 mediapipe/examples/desktop/h
 
 GLOG_logtostderr=1 bazel-bin/mediapipe/examples/desktop/hair_segmentation/hair_segmentation_cpu \
   --calculator_graph_config_file=mediapipe/graphs/hair_segmentation/hair_segmentation_desktop_live.pbtxt
+
+
+bazel build -c opt  --copt="-g" --strip="never" --define MEDIAPIPE_DISABLE_GPU=1 mediapipe/examples/desktop/hair_segmentation:hair_segmentation_cpu
