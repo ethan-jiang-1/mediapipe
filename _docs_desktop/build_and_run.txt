@@ -1,0 +1,22 @@
+https://google.github.io/mediapipe/getting_started/cpp.html
+
+Option 1: Running on CPU
+    To build, for example, MediaPipe Hands, run:
+
+    bazel build -c opt --define MEDIAPIPE_DISABLE_GPU=1 mediapipe/examples/desktop/hand_tracking:hand_tracking_cpu
+
+
+    To run the application:
+
+    GLOG_logtostderr=1 bazel-bin/mediapipe/examples/desktop/hand_tracking/hand_tracking_cpu \
+    --calculator_graph_config_file=mediapipe/graphs/hand_tracking/hand_tracking_desktop_live.pbtxt
+
+    This will open up your webcam as long as it is connected and on. Any errors is likely due to your webcam being not accessible.
+
+
+FOR hair_segmentation: 
+
+bazel build -c opt --define MEDIAPIPE_DISABLE_GPU=1 mediapipe/examples/desktop/hair_segmentation:hair_segmentation_cpu
+
+GLOG_logtostderr=1 bazel-bin/mediapipe/examples/desktop/hair_segmentation/hair_segmentation_cpu \
+  --calculator_graph_config_file=mediapipe/graphs/hair_segmentation/hair_segmentation_desktop_live.pbtxt
